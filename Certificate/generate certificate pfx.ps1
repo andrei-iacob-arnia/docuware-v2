@@ -1,5 +1,5 @@
 # Define certificate path and password
-$certFolder = "C:\Work\DocuWareNew\Certificate"
+$certFolder = "C:\Work\DocuWare\docuware-v2\Certificate"
 $certName = "VirtualPdfPrinterPSA"
 $pfxPath = Join-Path $certFolder "$certName.pfx"
 $certPassword = ConvertTo-SecureString -String "MySecurePassword123!" -Force -AsPlainText

@@ -21,3 +21,7 @@ bld/
 [Bb]in/
 [Oo]bj/
 .vs/
+
+
+Publish
+VirtualPrinterPackage/AppPackages

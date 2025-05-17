@@ -10,7 +10,7 @@
   <Identity
     Name="b7438534-7f15-428d-a464-98943a58e2b3"
     Publisher="CN=VirtualPdfPrinterPSA"
-    Version="1.0.7.0" />
+    Version="1.0.8.0" />
 
   <Properties>
     <DisplayName>VirtualPrinterPackage</DisplayName>

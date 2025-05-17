@@ -1,6 +1,6 @@
 #Generate cat
 
-cd /d C:\Work\DocuWareNew\PrinterDriver
+cd /d C:\Work\DocuWare\docuware-v2\PrinterDriver
 
 inf2cat /driver:. /os:10_X64,10_X86 /uselocaltime /cat:"C:\Work\DocuWareNew\Certificate\VirtualPdfPrinter.cat"
 

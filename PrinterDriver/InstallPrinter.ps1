@@ -1,8 +1,8 @@
 # ------------------ CONFIG ------------------
-$infPath        = "C:\Work\DocuWareNew\PrinterDriver\VirtualPdfPrinter.inf"
+$infPath        = "C:\Work\DocuWare\docuware-v2\PrinterDriver\VirtualPdfPrinter.inf"
 $printerDriverDir = Split-Path $infPath
 $catOutputPath  = Join-Path $printerDriverDir "VirtualPdfPrinter.cat"
-$pfxPath        = "C:\Work\DocuWareNew\Certificate\VirtualPdfPrinterPSA.pfx"
+$pfxPath        = "C:\Work\DocuWare\docuware-v2\Certificate\VirtualPdfPrinterPSA.pfx"
 $pfxPassword    = "MySecurePassword123!"  # Replace with your actual password
 
 # Full paths to tools

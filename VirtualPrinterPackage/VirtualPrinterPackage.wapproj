@@ -63,7 +63,7 @@
     <GenerateTestArtifacts>True</GenerateTestArtifacts>
     <AppxBundlePlatforms>x86</AppxBundlePlatforms>
     <PackageCertificateThumbprint>75592D46A96EB1CE5BAE02F40A1867678B7D513B</PackageCertificateThumbprint>
-    <AppInstallerUri>C:\Work\DocuWareNew\Publish</AppInstallerUri>
+    <AppInstallerUri>C:\Work\DocuWare\docuware-v2\Publish</AppInstallerUri>
     <HoursBetweenUpdateChecks>0</HoursBetweenUpdateChecks>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x86'">
