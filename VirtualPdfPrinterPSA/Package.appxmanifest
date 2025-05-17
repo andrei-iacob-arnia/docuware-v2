@@ -49,7 +49,7 @@
         <uap3:Extension Category="windows.printSupportApp">
           <uap3:PrintSupportApp>
             <uap3:PrintSupportVirtualPrinter>
-              <uap3:Name>Virtual PDF Printer</uap3:Name>
+              <uap3:Name>Virtual PDF Printer Queue Name</uap3:Name>
               <uap3:PortName>PORTPROMPT:</uap3:PortName>
               <uap3:DriverName>Microsoft XPS Document Writer v4</uap3:DriverName>
             </uap3:PrintSupportVirtualPrinter>

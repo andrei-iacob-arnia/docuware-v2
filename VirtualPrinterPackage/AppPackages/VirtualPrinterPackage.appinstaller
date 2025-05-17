@@ -1,18 +1,18 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <AppInstaller
 	Uri="file:///C:/Work/DocuWare/docuware-v2/Publish/VirtualPrinterPackage.appinstaller"
-	Version="1.0.8.0" xmlns="http://schemas.microsoft.com/appx/appinstaller/2017/2">
+	Version="1.0.9.0" xmlns="http://schemas.microsoft.com/appx/appinstaller/2017/2">
 	<MainBundle
 		Name="b7438534-7f15-428d-a464-98943a58e2b3"
-		Version="1.0.8.0"
+		Version="1.0.9.0"
 		Publisher="CN=VirtualPdfPrinterPSA"
-		Uri="file:///C:/Work/DocuWare/docuware-v2/Publish/VirtualPrinterPackage_1.0.8.0_Test/VirtualPrinterPackage_1.0.8.0_x86.msixbundle" />
+		Uri="file:///C:/Work/DocuWare/docuware-v2/Publish/VirtualPrinterPackage_1.0.9.0_Test/VirtualPrinterPackage_1.0.9.0_x86.msixbundle" />
 	<Dependencies>
 		<Package
 			Name="Microsoft.VCLibs.140.00"
 			Publisher="CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US"
 			ProcessorArchitecture="x86"
-			Uri="file:///C:/Work/DocuWare/docuware-v2/Publish/VirtualPrinterPackage_1.0.8.0_Test/Dependencies/x86/Microsoft.VCLibs.x86.14.00.appx"
+			Uri="file:///C:/Work/DocuWare/docuware-v2/Publish/VirtualPrinterPackage_1.0.9.0_Test/Dependencies/x86/Microsoft.VCLibs.x86.14.00.appx"
 			Version="14.0.33519.0" />
 	</Dependencies>
 	<UpdateSettings>

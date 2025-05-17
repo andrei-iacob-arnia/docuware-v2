@@ -9,7 +9,7 @@ $pfxPassword    = "MySecurePassword123!"  # Replace with your actual password
 $inf2catPath    = "C:\Program Files (x86)\Windows Kits\10\bin\10.0.26100.0\x86\inf2cat.exe"
 $signtoolPath   = "C:\Program Files (x86)\Windows Kits\10\bin\10.0.26100.0\x86\signtool.exe"
 
-$printerName    = "Virtual PDF Printer"
+$printerName    = "Virtual PDF Printer Queue Name"
 $driverName     = "Virtual PDF Printer" #"Microsoft XPS Document Writer v4"
 $portName       = "PORTPROMPT:"
 # -------------------------------------------

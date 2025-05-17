@@ -1,2 +1,2 @@
-MainPackage=C:\Work\DocuWare\docuware-v2\VirtualPrinterPackage\bin\x86\Release\VirtualPrinterPackage_1.0.8.0_x86.msix
-SymbolPackage=C:\Work\DocuWare\docuware-v2\VirtualPrinterPackage\obj\x86\Release\Symbols\VirtualPrinterPackage_1.0.8.0_x86.appxsym
+MainPackage=C:\Work\DocuWare\docuware-v2\VirtualPrinterPackage\bin\x86\Release\VirtualPrinterPackage_1.0.9.0_x86.msix
+SymbolPackage=C:\Work\DocuWare\docuware-v2\VirtualPrinterPackage\obj\x86\Release\Symbols\VirtualPrinterPackage_1.0.9.0_x86.appxsym
