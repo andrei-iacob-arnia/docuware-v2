@@ -1,0 +1,2 @@
+MainPackage=C:\Work\DocuWareNew\VirtualPrinterPackage\bin\x86\Release\VirtualPrinterPackage_1.0.7.0_x86.msix
+SymbolPackage=C:\Work\DocuWareNew\VirtualPrinterPackage\obj\x86\Release\Symbols\VirtualPrinterPackage_1.0.7.0_x86.appxsym

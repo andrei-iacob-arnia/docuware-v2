@@ -1,0 +1,18 @@
+#Generate cat
+
+cd /d C:\Work\DocuWareNew\PrinterDriver
+
+inf2cat /driver:. /os:10_X64,10_X86 /uselocaltime /cat:"C:\Work\DocuWareNew\Certificate\VirtualPdfPrinter.cat"
+
+
+#Sign the cat with the pfx
+
+cd /d C:\Work\DocuWareNew\Certificate
+
+signtool sign ^
+  /f VirtualPdfPrinterPSA.pfx ^
+  /p YourPasswordHere ^
+  /tr http://timestamp.digicert.com ^
+  /td sha256 ^
+  /fd sha256 ^
+  VirtualPdfPrinter.cat
