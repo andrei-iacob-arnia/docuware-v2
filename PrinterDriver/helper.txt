@@ -1,1 +1,11 @@
 pnputil /delete-driver oem0.inf /uninstall
+
+Remove-Printer -Name "Virtual Printer Queue Name"
+
+
+
+# Remove existing PSA app (if installed)
+Get-AppxPackage *VirtualPdfPrinterPSA* | Remove-AppxPackage
+
+# Remove printer queue
+Remove-Printer -Name "Virtual PDF Printer Queue Name"

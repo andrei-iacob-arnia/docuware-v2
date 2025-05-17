@@ -18,7 +18,13 @@ namespace PdfConverterHelper
         public MainWindow()
         {
             InitializeComponent();
+
+            Log($"PdfConverterHelper launched at {DateTime.Now}");
+
             ConvertXpsToPdf();
+
+            Log($"PdfConverterHelper finished at {DateTime.Now}");
+
             Application.Current.Shutdown();
         }
 
@@ -72,6 +78,24 @@ namespace PdfConverterHelper
 
             pdf.Save(pdfPath);
             MessageBox.Show("PDF saved to: " + pdfPath);
+        }
+
+        private void Log(string message)
+        {
+            string logDir = @"C:\Work\DocuWare\docuware-v2\Logs";
+            string logPath = System.IO.Path.Combine(logDir, "PdfConverterHelper-log.txt");
+
+            try
+            {
+                Directory.CreateDirectory(logDir);
+                File.AppendAllText(logPath, $"[{DateTime.Now:yyyy-MM-dd HH:mm:ss}] {message}\n");
+            }
+            catch (Exception ex)
+            {
+                // optional: fallback to temp
+                File.AppendAllText(@"C:\temp\PdfConverterHelper-error.txt", ex.ToString());
+            }
+
         }
     }
 }
