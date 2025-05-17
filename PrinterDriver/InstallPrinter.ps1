@@ -10,9 +10,48 @@ $inf2catPath    = "C:\Program Files (x86)\Windows Kits\10\bin\10.0.26100.0\x86\i
 $signtoolPath   = "C:\Program Files (x86)\Windows Kits\10\bin\10.0.26100.0\x86\signtool.exe"
 
 $printerName    = "Virtual PDF Printer"
-$driverName     = "Microsoft XPS Document Writer v4"
+$driverName     = "Virtual PDF Printer" #"Microsoft XPS Document Writer v4"
 $portName       = "PORTPROMPT:"
 # -------------------------------------------
+
+# 0. Cleanup existing printer and driver
+Write-Host "Removing existing printer and driver if they exist..." -ForegroundColor Yellow
+
+# Remove printer queue if it exists
+if (Get-Printer -Name $printerName -ErrorAction SilentlyContinue) {
+    Remove-Printer -Name $printerName
+    Write-Host "Removed existing printer: $printerName"
+}
+
+# Find installed driver matching printer name
+$driverPublishedName = $null
+$drivers = pnputil /enum-drivers | Out-String -Stream
+$currentBlock = @()
+foreach ($line in $drivers) {
+    if ($line -match "^Published Name\s*:\s*(oem\d+\.inf)") {
+        if ($currentBlock.Count -gt 0) {
+            $blockText = $currentBlock -join "`n"
+            if ($blockText -like "*$printerName*") {
+                $driverPublishedName = $currentName
+                break
+            }
+            $currentBlock.Clear()
+        }
+        $currentName = $Matches[1]
+    }
+    $currentBlock += $line
+}
+if (-not $driverPublishedName -and $currentBlock.Count -gt 0) {
+    $blockText = $currentBlock -join "`n"
+    if ($blockText -like "*$printerName*") {
+        $driverPublishedName = $currentName
+    }
+}
+
+if ($driverPublishedName) {
+    pnputil /delete-driver $driverPublishedName /uninstall /force
+    Write-Host "Removed driver package: $driverPublishedName"
+}
 
 # 1. Generate .cat file using inf2cat
 Write-Host "Generating .cat file..." -ForegroundColor Cyan
@@ -44,9 +83,18 @@ if ($LASTEXITCODE -ne 0) {
 Write-Host "Installing driver package..." -ForegroundColor Cyan
 pnputil /add-driver $infPath /install
 
+# 3.5 Register driver in print spooler
+Add-PrinterDriver -Name $driverName
+#Write-Host "`n📋 Registering driver in print spooler..." -ForegroundColor Cyan
+#try {
+#    Add-PrinterDriver -Name $driverName
+#    Write-Host "✅ Driver '$driverName' registered successfully."
+#} catch {
+#    Write-Warning "⚠️  Driver may already be registered or registration failed: $_"
+#}
+
 # 4. Add the actual printer queue
 Write-Host "Creating printer queue..." -ForegroundColor Cyan
-
 if (-not (Get-Printer -Name $printerName -ErrorAction SilentlyContinue)) {
     Add-Printer -Name $printerName -DriverName $driverName -PortName $portName
     Write-Host "✅ Printer '$printerName' created."

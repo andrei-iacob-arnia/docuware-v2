@@ -1,0 +1,1 @@
+pnputil /delete-driver oem0.inf /uninstall
