@@ -9,3 +9,15 @@ Get-AppxPackage *VirtualPdfPrinterPSA* | Remove-AppxPackage
 
 # Remove printer queue
 Remove-Printer -Name "Virtual PDF Printer Queue Name"
+
+
+
+Get-Printer -Name "Virtual PDF Printer Queue Name" | Format-List *
+
+
+
+# Uninstall old app
+Get-AppxPackage *VirtualPdfPrinterPSA* | Remove-AppxPackage
+
+# Reinstall the app (MSIX)
+Add-AppxPackage "C:\Work\DocuWare\docuware-v2\Publish\VirtualPrinterPackage_1.0.11.0_Test\VirtualPrinterPackage_1.0.11.0_x86.msixbundle"
