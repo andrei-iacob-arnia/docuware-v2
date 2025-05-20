@@ -4,13 +4,12 @@
   xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10"
   xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10"
   xmlns:rescap="http://schemas.microsoft.com/appx/manifest/foundation/windows10/restrictedcapabilities"
-  xmlns:desktop="http://schemas.microsoft.com/appx/manifest/desktop/windows10"
-  IgnorableNamespaces="uap rescap desktop">
+  IgnorableNamespaces="uap rescap">
 
   <Identity
-    Name="b7438534-7f15-428d-a464-98943a58e2b3"
+    Name="2bacddb9-071f-4821-a120-2bc13b5c2748"
     Publisher="CN=VirtualPdfPrinterPSA"
-    Version="1.0.11.0" />
+    Version="1.0.4.0" />
 
   <Properties>
     <DisplayName>VirtualPrinterPackage</DisplayName>
@@ -19,8 +18,8 @@
   </Properties>
 
   <Dependencies>
-    <TargetDeviceFamily Name="Windows.Universal" MinVersion="10.0.22000.0" MaxVersionTested="10.0.22621.0" />
-    <TargetDeviceFamily Name="Windows.Desktop" MinVersion="10.0.22000.0" MaxVersionTested="10.0.22621.0" />
+    <TargetDeviceFamily Name="Windows.Universal" MinVersion="10.0.0.0" MaxVersionTested="10.0.0.0" />
+    <TargetDeviceFamily Name="Windows.Desktop" MinVersion="10.0.14393.0" MaxVersionTested="10.0.14393.0" />
   </Dependencies>
 
   <Resources>
@@ -40,12 +39,6 @@
         <uap:DefaultTile Wide310x150Logo="Images\Wide310x150Logo.png" />
         <uap:SplashScreen Image="Images\SplashScreen.png" />
       </uap:VisualElements>
-
-      <!-- FullTrustProcess Declaration -->
-      <Extensions>
-        <desktop:Extension Category="windows.fullTrustProcess" Executable="PdfConverterHelper\PdfConverterHelper.exe" />
-      </Extensions>
-
     </Application>
   </Applications>
 
@@ -53,5 +46,4 @@
     <Capability Name="internetClient" />
     <rescap:Capability Name="runFullTrust" />
   </Capabilities>
-
 </Package>

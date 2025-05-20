@@ -19,28 +19,9 @@ namespace VirtualPdfPrinterPSA
         /// </summary>
         protected override async void OnLaunched(LaunchActivatedEventArgs e)
         {
-            try
-            {
-                // Log indirectly by creating a command flag
-                var triggerFile = @"C:\Work\DocuWare\docuware-v2\Logs\psa-invoked.txt";
-                Directory.CreateDirectory(System.IO.Path.GetDirectoryName(triggerFile));
-                File.WriteAllText(triggerFile, $"UWP PSA launched at {DateTime.Now}");
-
-                await FullTrustProcessLauncher.LaunchFullTrustProcessForCurrentAppAsync();
-            }
-            catch (Exception ex)
-            {
-                // Log indirectly by creating a command flag
-                var triggerFile = @"C:\Work\DocuWare\docuware-v2\Logs\psa-invoked.txt";
-                Directory.CreateDirectory(System.IO.Path.GetDirectoryName(triggerFile));
-                File.WriteAllText(triggerFile, $"Failed to launch full trust process: {ex.Message}");
-
-                // Optional: handle error launching the helper
-                //System.Diagnostics.Debug.WriteLine("Failed to launch full trust process: " + ex.Message);
-            }
-
-            // Exit UWP after triggering the WPF app
-            Application.Current.Exit();
+            var logPath = @"C:\Work\DocuWare\docuware-v2\Logs\psa-invoked.txt";
+            Directory.CreateDirectory(Path.GetDirectoryName(logPath));
+            File.AppendAllText(logPath, $"UWP PSA launched at {DateTime.Now}\r\n");
         }
 
         private void OnSuspending(object sender, SuspendingEventArgs e)
