@@ -23,5 +23,7 @@ bld/
 .vs/
 
 
-Publish
-VirtualPrinterPackage/AppPackages
+Publish/
+VirtualPrinterPackage/AppPackages/
+VirtualPdfPrinterPSA/AppPackages/
+VirtualPdfPrinterPSA/BundleArtifacts/
