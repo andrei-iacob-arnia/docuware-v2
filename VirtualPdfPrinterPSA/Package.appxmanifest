@@ -7,12 +7,13 @@
   xmlns:uap11="http://schemas.microsoft.com/appx/manifest/uap/windows/10/11"
   xmlns:printsupport="http://schemas.microsoft.com/appx/manifest/printsupport/windows10"
   xmlns:printsupport2="http://schemas.microsoft.com/appx/manifest/printsupport/windows10/2"
-  IgnorableNamespaces="uap uap3 rescap">
+  xmlns:rescap="http://schemas.microsoft.com/appx/manifest/foundation/windows10/restrictedcapabilities"
+  IgnorableNamespaces="uap uap3 rescap printsupport2">
 
   <Identity
     Name="VirtualPdfPrinterPSA"
     Publisher="CN=VirtualPdfPrinterPSA"
-    Version="1.0.12.0" />
+    Version="1.0.13.0" />
 
   <Properties>
     <DisplayName>VirtualPdfPrinterPSA</DisplayName>
@@ -38,79 +39,35 @@
         BackgroundColor="transparent"
         Square150x150Logo="Assets\Square150x150Logo.png"
         Square44x44Logo="Assets\Square44x44Logo.png">
-        <uap:DefaultTile Wide310x150Logo="ImAssetsages\Wide310x150Logo.png" />
+        <uap:DefaultTile Wide310x150Logo="Assets\Wide310x150Logo.png" />
         <uap:SplashScreen Image="Assets\SplashScreen.png" />
       </uap:VisualElements>
       <Extensions>
-        <printsupport2:Extension Category="windows.printSupportVirtualPrinterWorkflow" EntryPoint="Tasks.PrintSupportWorkflowBackgroundTask">
-          <printsupport2:PrintSupportVirtualPrinter DisplayName="ms-resource://PRINTER_NAME1" PrinterUri="contoso-psa:printer1" PreferredInputFormat="application/postscript" OutputFileTypes="ps;pdf" PdcFile="Config\PRINTER_PDC1.xml" PdrFile="Config\PRINTER_PDR1.xml">
-            <printsupport2:SupportedFormats>
-              <printsupport2:SupportedFormat Type="application/postscript" />
-              <printsupport2:SupportedFormat Type="application/pdf" MaxVersion="1.7" />
-            </printsupport2:SupportedFormats>
-          </printsupport2:PrintSupportVirtualPrinter>
-        </printsupport2:Extension>
-        <printsupport2:Extension Category="windows.printSupportVirtualPrinterWorkflow" EntryPoint="Tasks.PrintSupportWorkflowBackgroundTask">
-          <printsupport2:PrintSupportVirtualPrinter DisplayName="ms-resource://PRINTER_NAME2" PrinterUri ="contoso-psa:printer2" PreferredInputFormat="application/oxps" OutputFileTypes="pwgr;pdf" PdcFile=" Config\PRINTER_PDC2.xml" PdrFile=" Config\PRINTER_PDR2.xml">
-            <printsupport2:SupportedFormats>
-              <printsupport2:SupportedFormat Type="application/pdf" MaxVersion="1.7" />
-            </printsupport2:SupportedFormats>
-          </printsupport2:PrintSupportVirtualPrinter>
-        </printsupport2:Extension>
-        <printsupport:Extension Category="windows.printSupportExtension" EntryPoint="Tasks.PrintSupportExtensionBackGroundTask"/>
-        <printsupport:Extension Category="windows.printSupportSettingsUI" EntryPoint="PrintSupportApp.App"/>
-        <printsupport:Extension Category="windows.printSupportJobUI" EntryPoint="PrintSupportApp.App"/>
+          <printsupport2:Extension Category="windows.printSupportVirtualPrinterWorkflow"
+                                   EntryPoint="VirtualPdfPrinterPSA.VirtualPrinterBackgroundTask">
+              <printsupport2:PrintSupportVirtualPrinter DisplayName="VirtualPdfPrinterPSA"
+                                                        PrinterUri="VirtualPDFPrinterQueueNamePort:"
+                                                        PreferredInputFormat="application/postscript"
+                                                        OutputFileTypes="ps;pdf">
+                  <printsupport2:SupportedFormats>
+                      <printsupport2:SupportedFormat Type="application/postscript" />
+                      <printsupport2:SupportedFormat Type="application/pdf" MaxVersion="1.7" />
+                  </printsupport2:SupportedFormats>
+              </printsupport2:PrintSupportVirtualPrinter>
+          </printsupport2:Extension>
+        <printsupport:Extension Category="windows.printSupportExtension" EntryPoint="VirtualPdfPrinterPSA.VirtualPrinterBackgroundTask" />
+        <printsupport:Extension Category="windows.printSupportSettingsUI" EntryPoint="VirtualPdfPrinterPSA.App" />
+        <printsupport:Extension Category="windows.printSupportJobUI" EntryPoint="VirtualPdfPrinterPSA.App" />
       </Extensions>
     </Application>
   </Applications>
 
-  
-
-  <!--<Applications>
-    <Application Id="App"
-                 Executable="$targetnametoken$.exe"
-                 EntryPoint="VirtualPdfPrinterPSA.App"
-                 desktop4:SupportsMultipleInstances="true" uap18:RuntimeBehavior="windowsApp">
-      <uap:VisualElements
-        DisplayName="VirtualPdfPrinterPSA"
-        Square150x150Logo="Assets\Square150x150Logo.png"
-        Square44x44Logo="Assets\Square44x44Logo.png"
-        Description="VirtualPdfPrinterPSA"
-        BackgroundColor="transparent">
-        <uap:DefaultTile Wide310x150Logo="Assets\Wide310x150Logo.png"/>
-        <uap:SplashScreen Image="Assets\SplashScreen.png" />
-      </uap:VisualElements>
-
-      <Extensions>
-        <printsupport2:Extension Category="windows.printSupportVirtualPrinterWorkflow"
-                                 EntryPoint="VirtualPdfPrinterPSA.VirtualPrinterBackgroundTask">
-          <printsupport2:PrintSupportVirtualPrinter
-            DisplayName="VirtualPdfPrinterPSA"
-            PrinterUri="Abc-print:VirtualPdfPrinterPSA"
-            PreferredInputFormat="application/postscript"
-            OutputFileTypes="ps;pdf"
-            PdcFile="Config\Abc_PDC.xml" >
-            <printsupport2:SupportedFormats>
-              <printsupport2:SupportedFormat Type="application/postscript" />
-              <printsupport2:SupportedFormat Type="application/pdf" MaxVersion="1.7" />
-            </printsupport2:SupportedFormats>
-          </printsupport2:PrintSupportVirtualPrinter>
-        </printsupport2:Extension>
-        <printsupport:Extension Category="windows.printSupportExtension" EntryPoint="VirtualPdfPrinterPSA.PrintSupportExtensionBackGroundTask"/>
-        <printsupport:Extension Category="windows.printSupportSettingsUI" EntryPoint="VirtualPdfPrinterPSA.App"/>
-        <printsupport:Extension Category="windows.printSupportJobUI" EntryPoint="VirtualPdfPrinterPSA.App"/>
-      </Extensions>
-      
-    </Application>
-  </Applications>-->
-
-  
-
   <Capabilities>
     <Capability Name="internetClient" />
+    <rescap:Capabilities>
+      <rescap:Capability Name="printSupportApp" />
+    </rescap:Capabilities>
   </Capabilities>
 
-  <!--<rescap:Capabilities>
-    <rescap:Capability Name="printSupportApp" />
-  </rescap:Capabilities>-->
+  
 </Package>
