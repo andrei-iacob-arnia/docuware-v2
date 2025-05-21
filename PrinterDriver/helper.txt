@@ -1,6 +1,6 @@
 pnputil /delete-driver oem0.inf /uninstall
 
-Remove-Printer -Name "Virtual Printer Queue Name"
+Remove-Printer -Name "VirtualPrinterQueueName"
 
 
 # Get

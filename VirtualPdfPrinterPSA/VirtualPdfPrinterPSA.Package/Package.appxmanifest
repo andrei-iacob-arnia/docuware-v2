@@ -16,7 +16,7 @@
   <Identity
     Name="b74915a3-7f3b-4584-aa26-ea035b651ea2"
     Publisher="CN=VirtualPdfPrinterPSA"
-    Version="1.0.8.0" />
+    Version="1.0.17.0" />
 
   <mp:PhoneIdentity PhoneProductId="b74915a3-7f3b-4584-aa26-ea035b651ea2" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
 
@@ -52,7 +52,7 @@
       <Extensions>
         <printsupport2:Extension Category="windows.printSupportVirtualPrinterWorkflow"
                                  EntryPoint="VirtualPdfPrinterPSA.VirtualPrinterBackgroundTask">
-          <printsupport2:PrintSupportVirtualPrinter DisplayName="Virtual PDF Printer Queue Name"
+          <printsupport2:PrintSupportVirtualPrinter DisplayName="VirtualPDFPrinterQueueName"
                                                     PrinterUri="VirtualPDFPrinterQueueNamePort:"
                                                     PreferredInputFormat="application/postscript"
                                                     OutputFileTypes="ps;pdf"

@@ -16,7 +16,7 @@
   <Identity
     Name="VirtualPdfPrinterPSA"
     Publisher="CN=VirtualPdfPrinterPSA"
-    Version="1.0.15.0" />
+    Version="1.0.2.0" />
 
   <Properties>
     <DisplayName>VirtualPdfPrinterPSA</DisplayName>
@@ -50,7 +50,7 @@
       <Extensions>
         <printsupport2:Extension Category="windows.printSupportVirtualPrinterWorkflow"
                                  EntryPoint="VirtualPdfPrinterPSA.VirtualPrinterBackgroundTask">
-          <printsupport2:PrintSupportVirtualPrinter DisplayName="Virtual PDF Printer Queue Name"
+          <printsupport2:PrintSupportVirtualPrinter DisplayName="VirtualPDFPrinterQueueName"
                                                     PrinterUri="VirtualPDFPrinterQueueNamePort:"
                                                     PreferredInputFormat="application/postscript"
                                                     OutputFileTypes="ps;pdf"

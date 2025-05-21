@@ -22,4 +22,10 @@
     <AppInstallerUri>C:\Work\DocuWare\docuware-v2\Publish\appx</AppInstallerUri>
     <HoursBetweenUpdateChecks>0</HoursBetweenUpdateChecks>
   </PropertyGroup>
+  <ItemGroup>
+    <None Remove="pdc.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="pdc.xml" />
+  </ItemGroup>
 </Project>
