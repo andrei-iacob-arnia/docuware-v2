@@ -1,0 +1,7 @@
+{
+  "profiles": {
+    "VirtualPdfPrinterPSA1": {
+      "commandName": "MsixPackage"
+    }
+  }
+}

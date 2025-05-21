@@ -10,18 +10,18 @@
   xmlns:printsupport2="http://schemas.microsoft.com/appx/manifest/printsupport/windows10/2"
   xmlns:rescap="http://schemas.microsoft.com/appx/manifest/foundation/windows10/restrictedcapabilities"
   xmlns:desktop4="http://schemas.microsoft.com/appx/manifest/desktop/windows10/4"
-  xmlns:iot2="http://schemas.microsoft.com/appx/manifest/iot/windows10/2"  
+  xmlns:iot2="http://schemas.microsoft.com/appx/manifest/iot/windows10/2"
   IgnorableNamespaces="uap mp rescap printsupport2">
 
   <Identity
-    Name="b74915a3-7f3b-4584-aa26-ea035b651ea2"
+    Name="95f68aec-bb87-402a-8a3e-0454e6f6e439"
     Publisher="CN=VirtualPdfPrinterPSA"
-    Version="1.0.8.0" />
+    Version="1.0.0.0" />
 
-  <mp:PhoneIdentity PhoneProductId="b74915a3-7f3b-4584-aa26-ea035b651ea2" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
+  <mp:PhoneIdentity PhoneProductId="95f68aec-bb87-402a-8a3e-0454e6f6e439" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
 
   <Properties>
-    <DisplayName>VirtualPdfPrinterPSA.Package</DisplayName>
+    <DisplayName>VirtualPdfPrinterPSA1</DisplayName>
     <PublisherDisplayName>andreii</PublisherDisplayName>
     <Logo>Assets\StoreLogo.png</Logo>
   </Properties>
@@ -37,7 +37,7 @@
   <Applications>
     <Application Id="App"
       Executable="$targetnametoken$.exe"
-      EntryPoint="VirtualPdfPrinterPSA.Package.App"
+      EntryPoint="VirtualPdfPrinterPSA1.App"
       desktop4:SupportsMultipleInstances="true"
       iot2:SupportsMultipleInstances="true">
       <uap:VisualElements

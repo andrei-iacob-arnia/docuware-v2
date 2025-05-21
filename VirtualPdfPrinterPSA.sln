@@ -7,6 +7,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VirtualPdfPrinterPSA", "Vir
 EndProject
 Project("{C7167F0D-BC9F-4E6E-AFE1-012C56B48DB5}") = "VirtualPdfPrinterPSA.Package", "VirtualPdfPrinterPSA\VirtualPdfPrinterPSA.Package\VirtualPdfPrinterPSA.Package.wapproj", "{E23E991B-AB8B-4097-81FE-701E130F00FC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VirtualPdfPrinterPSA1", "VirtualPdfPrinterPSA1\VirtualPdfPrinterPSA1.csproj", "{E39AE7F4-DF44-45F5-BB16-5C889E427AC0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Grouped", "Grouped", "{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -59,9 +63,37 @@ Global
 		{E23E991B-AB8B-4097-81FE-701E130F00FC}.Release|x86.ActiveCfg = Release|x86
 		{E23E991B-AB8B-4097-81FE-701E130F00FC}.Release|x86.Build.0 = Release|x86
 		{E23E991B-AB8B-4097-81FE-701E130F00FC}.Release|x86.Deploy.0 = Release|x86
+		{E39AE7F4-DF44-45F5-BB16-5C889E427AC0}.Debug|Any CPU.ActiveCfg = Debug|x64
+		{E39AE7F4-DF44-45F5-BB16-5C889E427AC0}.Debug|Any CPU.Build.0 = Debug|x64
+		{E39AE7F4-DF44-45F5-BB16-5C889E427AC0}.Debug|Any CPU.Deploy.0 = Debug|x64
+		{E39AE7F4-DF44-45F5-BB16-5C889E427AC0}.Debug|arm64.ActiveCfg = Debug|arm64
+		{E39AE7F4-DF44-45F5-BB16-5C889E427AC0}.Debug|arm64.Build.0 = Debug|arm64
+		{E39AE7F4-DF44-45F5-BB16-5C889E427AC0}.Debug|arm64.Deploy.0 = Debug|arm64
+		{E39AE7F4-DF44-45F5-BB16-5C889E427AC0}.Debug|x64.ActiveCfg = Debug|x64
+		{E39AE7F4-DF44-45F5-BB16-5C889E427AC0}.Debug|x64.Build.0 = Debug|x64
+		{E39AE7F4-DF44-45F5-BB16-5C889E427AC0}.Debug|x64.Deploy.0 = Debug|x64
+		{E39AE7F4-DF44-45F5-BB16-5C889E427AC0}.Debug|x86.ActiveCfg = Debug|x86
+		{E39AE7F4-DF44-45F5-BB16-5C889E427AC0}.Debug|x86.Build.0 = Debug|x86
+		{E39AE7F4-DF44-45F5-BB16-5C889E427AC0}.Debug|x86.Deploy.0 = Debug|x86
+		{E39AE7F4-DF44-45F5-BB16-5C889E427AC0}.Release|Any CPU.ActiveCfg = Release|x64
+		{E39AE7F4-DF44-45F5-BB16-5C889E427AC0}.Release|Any CPU.Build.0 = Release|x64
+		{E39AE7F4-DF44-45F5-BB16-5C889E427AC0}.Release|Any CPU.Deploy.0 = Release|x64
+		{E39AE7F4-DF44-45F5-BB16-5C889E427AC0}.Release|arm64.ActiveCfg = Release|arm64
+		{E39AE7F4-DF44-45F5-BB16-5C889E427AC0}.Release|arm64.Build.0 = Release|arm64
+		{E39AE7F4-DF44-45F5-BB16-5C889E427AC0}.Release|arm64.Deploy.0 = Release|arm64
+		{E39AE7F4-DF44-45F5-BB16-5C889E427AC0}.Release|x64.ActiveCfg = Release|x64
+		{E39AE7F4-DF44-45F5-BB16-5C889E427AC0}.Release|x64.Build.0 = Release|x64
+		{E39AE7F4-DF44-45F5-BB16-5C889E427AC0}.Release|x64.Deploy.0 = Release|x64
+		{E39AE7F4-DF44-45F5-BB16-5C889E427AC0}.Release|x86.ActiveCfg = Release|x86
+		{E39AE7F4-DF44-45F5-BB16-5C889E427AC0}.Release|x86.Build.0 = Release|x86
+		{E39AE7F4-DF44-45F5-BB16-5C889E427AC0}.Release|x86.Deploy.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{B92C72A7-A455-4BEE-A7A8-5F28275A2CD7} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
+		{E23E991B-AB8B-4097-81FE-701E130F00FC} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {295A7B00-04ED-4104-B665-ADC112C98554}
