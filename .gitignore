@@ -24,6 +24,9 @@ bld/
 
 
 Publish/
-VirtualPrinterPackage/AppPackages/
-VirtualPdfPrinterPSA/AppPackages/
-VirtualPdfPrinterPSA/BundleArtifacts/
+
+VirtualPdfPrinterPSA/VirtualPdfPrinterPSA/AppPackages/
+VirtualPdfPrinterPSA/VirtualPdfPrinterPSA/BundleArtifacts/
+
+VirtualPdfPrinterPSA/VirtualPdfPrinterPSA.Package/AppPackages/
+VirtualPdfPrinterPSA/VirtualPdfPrinterPSA.Package/BundleArtifacts/
