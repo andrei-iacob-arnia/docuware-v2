@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "VirtualPdfPrinterWinUI (Package)": {
+      "commandName": "MsixPackage"
+    },
+    "VirtualPdfPrinterWinUI (Unpackaged)": {
+      "commandName": "Project"
+    }
+  }
+}
