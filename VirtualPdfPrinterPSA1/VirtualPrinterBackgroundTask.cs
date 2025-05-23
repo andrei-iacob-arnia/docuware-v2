@@ -1,6 +1,7 @@
 ﻿using System;
 using System.IO;
 using Windows.ApplicationModel.Background;
+using Windows.Storage;
 
 namespace VirtualPdfPrinterPSA
 {
@@ -10,9 +11,13 @@ namespace VirtualPdfPrinterPSA
         {
             try
             {
-                var logFile = @"C:\Temp\psa-invoked.txt";
-                Directory.CreateDirectory(Path.GetDirectoryName(logFile));
-                File.AppendAllText(logFile, $"VirtualPrinterBackgroundTask launched at {DateTime.Now}\r\n");
+                //var logPath = @"C:\Work\DocuWare\docuware-v2\psa-invoked.txt";
+                //Directory.CreateDirectory(Path.GetDirectoryName(logFile));
+
+                StorageFolder localFolder = ApplicationData.Current.LocalFolder;
+                string logPath = Path.Combine(localFolder.Path, "psa-invoked.txt");
+
+                File.AppendAllText(logPath, $"VirtualPrinterBackgroundTask launched at {DateTime.Now}\r\n");
             }
             finally
             {

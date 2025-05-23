@@ -45,7 +45,7 @@ namespace VirtualPdfPrinterWinUI
         {
             var logPath = @"C:\Work\DocuWare\docuware-v2\Logs\psa-invoked.txt";
             Directory.CreateDirectory(System.IO.Path.GetDirectoryName(logPath));
-            File.AppendAllText(logPath, $"UWP PSA launched at {DateTime.Now}\r\n");
+            File.AppendAllText(logPath, $"VirtualPdfPrinterWinUI PSA launched at {DateTime.Now}\r\n");
 
             _window = new MainWindow();
             _window.Activate();
